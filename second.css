@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    background-image: url('ma.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.calculator {
+    background: rgb(38, 41, 197);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px black;
+    width: 90%; /* Set a percentage width for responsiveness */
+    max-width: 400px; /* Set a max-width to limit size on larger screens */
+}
+
+#display {
+    width: 100%;
+    padding: 10px; /* Increased padding for better touch support */
+    font-size: 4em; /* Adjusted font size for better visibility */
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: right;
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    background: #004494;
+}
+
+/* Media queries for additional responsiveness */
+@media (max-width: 600px) {
+    #display {
+        font-size: 3em; /* Smaller font size on smaller screens */
+    }
+
+    button {
+        font-size: 1.2em; /* Slightly smaller button text */
+    }
+}
